@@ -60,6 +60,7 @@ const deletestudent = async (request, reply) => {
 const getprofile = async (request, reply) => {
   try {
     const student = request.student;
+    console.log(request.student);
     if (!student){
       return reply.code(400).send({error: 'Student data missing'});
     }

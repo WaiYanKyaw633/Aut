@@ -7,6 +7,6 @@ module.exports = async function (fastify, options) {
     fastify.get('/students',auth.getAllstudent);
     fastify.delete('/students/:id',auth.deletestudent);
 
-    fastify.get('/profile',{prehandler:[ fastify.authenticate]}, auth.getprofile);
+    fastify.get('/profile',{preHandler:[fastify.authenticate]}, auth.getprofile);
   
 };
